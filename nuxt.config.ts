@@ -7,4 +7,9 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
+
+  modules: ["@pinia/nuxt"],
+  alias: {
+    pinia: "/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs",
+  },
 })
