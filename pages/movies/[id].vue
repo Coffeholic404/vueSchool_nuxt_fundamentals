@@ -16,4 +16,14 @@ if(movie.value.Error === "Incorrect IMDB ID"){
             showError({statusCode: 404, statusMessage: "Page Not Found"})
         }
 
+    useHead({
+  title: movie.value.Title,
+  meta: [
+    { name: "description", content: movie.value.Plot },
+    { property: "og:description", content: movie.value.Plot },
+    { property: "og:image", content: movie.value.Poster },
+    { name: "twitter:card", content: `summary_large_image` },
+  ],
+});
+
 </script>
