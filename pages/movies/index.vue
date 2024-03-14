@@ -1,6 +1,6 @@
 <template>
     <div>
-        page: Movies
+        <MovieSearch />
     </div>
 </template>
 
