@@ -8,11 +8,8 @@ useHead({
 </script>
 <template>
   <div>
-    <nav style="display: flex; gap: 1rem;">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/movies">Movies</NuxtLink>
-      <NuxtLink to="https://vueschool.io">Vue School</NuxtLink>
-    </nav>
+    <NuxtLayout>
     <NuxtPage />
+  </NuxtLayout>
   </div>
 </template>

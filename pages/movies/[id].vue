@@ -9,7 +9,7 @@
 <script setup>
 const route = useRoute()
 const {data: movie} = await useFetch((`http://www.omdbapi.com/?apikey=9357a82d&i=${route.params.id}`), {
-    pick: ["Plot", "Title", "Error"],
+    pick: ["Plot", "Title", "Error", "Poster"],
     key: `/movies/${route.params.id}`,
 });
 if(movie.value.Error === "Incorrect IMDB ID"){
