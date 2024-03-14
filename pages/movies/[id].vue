@@ -1,16 +1,16 @@
 <template>
     <div>
         <pre>
-            {{data}}
+            {{movie}}
         </pre>
     </div>
 </template>
 
 <script setup>
 const route = useRoute()
-const { data } = await useAsyncData(`/moveis/${route.params.id}`, () => {
-    return $fetch(`http://www.omdbapi.com/?apikey=9357a82d&i=${route.params.id}`)
-}, {
-    pick: ["Plot", "Title"]
+const {data: movie} = await useFetch((`http://www.omdbapi.com/?apikey=9357a82d&i=${route.params.id}`), {
+    pick: ["Plot", "Title"],
+    key: `/movies/${route.params.id}`
 })
+
 </script>
